@@ -28,6 +28,8 @@
             case "right":
                 position.x++;
                 break;
+            default:
+                throw new Error(`Unknown direction: ${direction}`);
         }
     }
 

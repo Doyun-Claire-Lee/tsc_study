@@ -25,9 +25,9 @@
     if (state.state ==='loading') {
       console.log('👀 loading...');
     } else if (state.state === 'success') {
-      console.log('😃 loaded');
+      console.log(`😃 ${state.response.body}`);
     } else if (state.state === 'fail') {
-      console.log('😱 no network');
+      console.log(`😱 ${state.reason}`);
     }
   }
 

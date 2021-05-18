@@ -15,6 +15,8 @@
                 return x / y;
             case "remainder":
                 return x % y;
+            default:
+                throw new Error(`Unknown operator: ${operator}`);
         }
     }
 
