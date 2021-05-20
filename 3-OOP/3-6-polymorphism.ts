@@ -2,23 +2,18 @@
     type CoffeeCup = {
         shots: number;
         hasMilk: boolean;
+        hasSugar?: boolean;
     };
 
     interface CoffeeMaker {
         makeCoffee(shots: number): CoffeeCup;
     }
 
-    interface CommercialCoffeeMaker {
-        makeCoffee(shots: number): CoffeeCup;
-        fillCoffeeBeans(beans: number): void;
-        clean(): void;
-    }
-
-    class CoffeeMachine implements CoffeeMaker, CommercialCoffeeMaker {
+    class CoffeeMachine implements CoffeeMaker {
         static BEANS_GRAM_PER_SHOT: number = 7; // class level
         coffeeBeans: number = 0;                // instance(object) level
 
-        private constructor(coffeeBeans: number) {
+        public constructor(coffeeBeans: number) {
             this.coffeeBeans = coffeeBeans;
         }
 
@@ -26,7 +21,6 @@
             return new CoffeeMachine(coffeeBeans);
         }
 
-        // 접근제어자를 통한 추상화
         private grindBeans(shots: number) {
             console.log(`grinding beans for ${shots}`);
             if (this.coffeeBeans < shots * CoffeeMachine.BEANS_GRAM_PER_SHOT) {
@@ -47,7 +41,6 @@
             };
         }
 
-        // 인터페이스를 통한 추상화
         makeCoffee(shots: number): CoffeeCup {
             this.grindBeans(shots);
             this.preheat();
@@ -63,41 +56,45 @@
         }
     }
 
-    // const maker = CoffeeMachine.makeMachine(32);
-    // maker.makeCoffee(4);
-    //
-    // const maker2: CommercialCoffeeMaker = CoffeeMachine.makeMachine(10);
-    // maker2.fillCoffeeBeans(20);
-    // maker2.clean();
-    //
-    // const maker3: CoffeeMaker = CoffeeMachine.makeMachine(50);
-    // maker3.makeCoffee(3);
-
-    class AmateurUser {
-        constructor(private machine: CoffeeMaker) {
+    class CaffeLatteMachine extends CoffeeMachine {
+        constructor(beans: number, public serialNumber: string) {
+            super(beans);
         }
 
-        makeCoffee() {
-            const coffee = this.machine.makeCoffee(2);
+        makeCoffee(shots: number): CoffeeCup {
+            const coffee = super.makeCoffee(shots);
+            this.steamMilk();
+            return {
+                ...coffee,
+                hasMilk: true
+            }
         }
-    }
 
-    class ProBarista {
-        constructor(private machine: CommercialCoffeeMaker) {
-        }
-
-        makeCoffee() {
-            const coffee = this.machine.makeCoffee(2);
-            this.machine.fillCoffeeBeans(45);
-            this.machine.clean();
+        private steamMilk(): void {
+            console.log('steaming some milk....🥛');
         }
     }
 
-    const maker: CoffeeMachine = CoffeeMachine.makeMachine(50);
-    const amateur = new AmateurUser(maker);
-    const pro = new ProBarista(maker);
+    class SweetCoffeeMaker extends CoffeeMachine {
+        makeCoffee(shots: number): CoffeeCup {
+            const coffee = super.makeCoffee(shots);
+            return {
+                ...coffee,
+                hasSugar: true
+            }
+        }
+    }
 
-    amateur.makeCoffee();
-    pro.makeCoffee();
-
+    const machines: CoffeeMaker[] = [
+        new CoffeeMachine(16),
+        new CaffeLatteMachine(16, '1'),
+        new SweetCoffeeMaker(16),
+        new CoffeeMachine(16),
+        new CaffeLatteMachine(16, '1'),
+        new SweetCoffeeMaker(16)
+    ];
+    machines.forEach(machine => {
+        console.log('--------------------------------------')
+        machine.makeCoffee(1);
+    })
 }
