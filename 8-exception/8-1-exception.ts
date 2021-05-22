@@ -16,7 +16,7 @@ function closeFile(fileName: string) {
     //
 }
 
-const fileName = 'not exist!💩';
+const fileName = 'not exist!!💩';
 try {
     console.log(readFile(fileName));
 } catch (e) {
