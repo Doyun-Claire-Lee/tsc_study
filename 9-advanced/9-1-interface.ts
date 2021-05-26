@@ -17,7 +17,8 @@ const obj1: PositionType = {
 
 const obj2: PositionInterface = {
     x: 1,
-    y: 2
+    y: 2,
+    z: 3
 };
 
 // 2. class
