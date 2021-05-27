@@ -29,6 +29,7 @@ class Pos1 implements PositionType {
 class Pos2 implements PositionInterface {
     x: number;
     y: number;
+    z: number;
 }
 
 /* extends */
