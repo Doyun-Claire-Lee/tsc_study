@@ -35,3 +35,4 @@
     move('right');
     console.log(position); // { x: 0, y: 0}
 }
+//# sourceMappingURL=game.js.map

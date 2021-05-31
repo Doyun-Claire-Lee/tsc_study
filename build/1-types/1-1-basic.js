@@ -54,3 +54,4 @@
     function acceptSomeObject(obj) { }
     acceptSomeObject({ name: 'ellie' });
 }
+//# sourceMappingURL=1-1-basic.js.map

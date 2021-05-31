@@ -107,3 +107,4 @@
     const coldLatteMachine = new CoffeeMachine(12, coldMilkMaker, noSugar);
     const sweetLatteMachine = new CoffeeMachine(12, cheapMilkMaker, candySugar);
 }
+//# sourceMappingURL=3-7-composition.js.map

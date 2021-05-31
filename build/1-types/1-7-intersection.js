@@ -10,3 +10,4 @@
         work: () => { }
     });
 }
+//# sourceMappingURL=1-7-intersection.js.map

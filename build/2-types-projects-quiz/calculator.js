@@ -25,3 +25,4 @@
     console.log(calculate('divide', 4, 2)); // 2
     console.log(calculate('remainder', 5, 2)); // 1
 }
+//# sourceMappingURL=calculator.js.map

@@ -53,3 +53,4 @@
     console.log(user.fullName); // getter 호출
     user.age = 10; // setter 호출
 }
+//# sourceMappingURL=3-3-encapsulation.js.map

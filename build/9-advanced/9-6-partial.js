@@ -12,3 +12,4 @@
     const updatedToDo = updateToDo(toDo, { title: 'coding study' });
     console.log(updatedToDo);
 }
+//# sourceMappingURL=9-6-partial.js.map

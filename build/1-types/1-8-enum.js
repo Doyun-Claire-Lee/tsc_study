@@ -33,3 +33,4 @@
     day = 0; // Enum 타입임에도 불구하고 숫자를 새로 할당할 수 있음. 💩
     let dayOfWeek = 'Monday';
 }
+//# sourceMappingURL=1-8-enum.js.map

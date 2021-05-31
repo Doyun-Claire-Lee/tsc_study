@@ -39,3 +39,4 @@
     }
     stack.pop(); // Error
 }
+//# sourceMappingURL=stack.js.map

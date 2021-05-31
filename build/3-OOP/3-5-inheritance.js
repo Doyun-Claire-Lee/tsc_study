@@ -58,3 +58,4 @@
     console.log(coffee);
     console.log(latteMachine.serialNumber);
 }
+//# sourceMappingURL=3-5-inheritance.js.map

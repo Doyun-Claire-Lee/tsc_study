@@ -15,3 +15,4 @@ class Pos1 {
 }
 class Pos2 {
 }
+//# sourceMappingURL=9-1-interface.js.map

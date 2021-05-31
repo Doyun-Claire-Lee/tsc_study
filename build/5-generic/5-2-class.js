@@ -15,3 +15,4 @@ const either = new SimpleEither(4, 5);
 either.left(); // 4
 either.right(); // 5
 const best = new SimpleEither({ name: 'ellie' }, 'hello');
+//# sourceMappingURL=5-2-class.js.map

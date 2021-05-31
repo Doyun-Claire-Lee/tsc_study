@@ -45,3 +45,4 @@
     console.log(addNumbers(1, 2, 3, 4));
     console.log(addNumbers(1, 2, 3, 4, 5, 0));
 }
+//# sourceMappingURL=1-2-function.js.map

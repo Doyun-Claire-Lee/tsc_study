@@ -1,6 +1,6 @@
 {
     // JavaScript 💩
-    function jsAdd(num1, num2) {
+    function jsAdd(num1: any, num2: any) {
         return num1 + num2;
     }
 
@@ -10,7 +10,7 @@
     }
 
     // JavaScript 💩
-    function jsFetchNum(id) {
+    function jsFetchNum(id: any) {
         // code...
         // code...
         // code...

@@ -24,3 +24,4 @@
     const number = checkNotNull(123);
     const bool = checkNotNull(true);
 }
+//# sourceMappingURL=5-1-function.js.map

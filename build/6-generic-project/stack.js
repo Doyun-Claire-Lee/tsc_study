@@ -42,3 +42,4 @@
         console.log(stack2.pop());
     }
 }
+//# sourceMappingURL=stack.js.map

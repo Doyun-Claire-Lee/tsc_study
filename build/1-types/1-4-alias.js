@@ -10,3 +10,4 @@
     ellieName = 'name';
     const json = 'json';
 }
+//# sourceMappingURL=1-4-alias.js.map

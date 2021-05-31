@@ -37,3 +37,4 @@
     const app = new App(service);
     app.run();
 }
+//# sourceMappingURL=8-3-state.js.map

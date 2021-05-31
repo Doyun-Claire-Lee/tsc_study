@@ -15,3 +15,4 @@
     student[1]; // 123
     const [name, age] = student;
 }
+//# sourceMappingURL=1-3-array.js.map

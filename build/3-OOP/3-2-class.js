@@ -23,3 +23,4 @@
     const maker = new CoffeeMaker(32);
     const maker2 = CoffeeMaker.makeMachine(10);
 }
+//# sourceMappingURL=3-2-class.js.map

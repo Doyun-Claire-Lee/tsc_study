@@ -20,3 +20,4 @@
     numbers.push(2); // 😱 무조건 null이 아닐 경우 느낌표를 붙여 장담(?)
     const button = document.querySelector('class');
 }
+//# sourceMappingURL=1-10-assertion.js.map

@@ -46,3 +46,4 @@ function getValue(obj, key) {
 console.log(getValue(obj, 'name'));
 console.log(getValue(obj, 'age'));
 console.log(getValue(obj2, 'animal'));
+//# sourceMappingURL=5-3-constraints.js.map
